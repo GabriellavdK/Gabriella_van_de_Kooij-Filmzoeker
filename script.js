@@ -8,6 +8,17 @@ import { movies } from './movie.js';
 
 // Functions
 const searchArray = str => movies.filter(({ Title }, result) => result = Title.includes(str));
+const addImageToHtml = (image, url) => {
+	const menu = document.getElementById('overview-movies');
+	const newImg = document.createElement("img");
+	newImg.classList.add("");
+	newImg.src = image;
+
+	// link toevoegen naar imbd
+
+	menu.appendChild(newImg);
+}
+
 
 // Constants
 const newMovies = movies.filter(({ Year }) => Year >= 2014);
