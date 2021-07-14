@@ -5,14 +5,14 @@ const searchArray = str => movies.filter(({ Title }, result) => result = Title.i
 
 const removeImageOffHtml = menu => {
 	const linksOnPage = document.getElementById('overview-movies').querySelectorAll('a');
-	console.log("menu", menu);
+	console.log("links.length", linksOnPage.length);
+	console.log("links", linksOnPage);
 	// menu.removeChild(linksOnPage);
-	let counter = 0;
 	if (linksOnPage.length != 0) {
-		for (let i = 0; i <= linksOnPage.length; i++) {
-			menu.removeChild(linksOnPage[counter]);
-			counter++;
+		for (let i = linksOnPage.length; i > 0; i--) {
 			console.log("counter", counter);
+			menu.remove(linksOnPage[i]);
+			console.log("links", linksOnPage);
 		}
 	} else {
 		return;
@@ -55,14 +55,11 @@ const radioButtonBatman = document.getElementById("filter-buttons").querySelecto
 console.log(addImageToHtml(princessMovies));
 
 // Eventlisteners
-radioButtonNewMovies.addEventListener('click', item => {
-	console.log(item);
-	addImageToHtml(newMovies);
-});
-// radioButtonAvengers.addEventListener('click', addImageToHtml(avengersMovies));
-// radioButtonXMen.addEventListener('click', addImageToHtml(xmenMovies));
-// radioButtonPrincess.addEventListener('click', addImageToHtml(princessMovies));
-// radioButtonBatman.addEventListener('click', addImageToHtml(batmanMovies));
+radioButtonNewMovies.addEventListener('click', addImageToHtml(newMovies));
+radioButtonAvengers.addEventListener('click', addImageToHtml(avengersMovies));
+radioButtonXMen.addEventListener('click', addImageToHtml(xmenMovies));
+radioButtonPrincess.addEventListener('click', addImageToHtml(princessMovies));
+radioButtonBatman.addEventListener('click', addImageToHtml(batmanMovies));
 
 
 
