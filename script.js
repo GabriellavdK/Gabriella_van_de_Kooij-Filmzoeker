@@ -52,9 +52,9 @@ const batmanMovies = searchArray("Batman");
 addImageToHtml(allMovies);
 
 // Eventlisteners
-radioButtonNewMovies.addEventListener('click', item => item = addImageToHtml(newMovies));
-radioButtonAvengers.addEventListener('click', item => item = addImageToHtml(avengersMovies));
-radioButtonXMen.addEventListener('click', item => item = addImageToHtml(xmenMovies));
-radioButtonPrincess.addEventListener('click', item => item = addImageToHtml(princessMovies));
-radioButtonBatman.addEventListener('click', item => item = addImageToHtml(batmanMovies));
+radioButtonNewMovies.addEventListener('change', item => item = addImageToHtml(newMovies));
+radioButtonAvengers.addEventListener('change', item => item = addImageToHtml(avengersMovies));
+radioButtonXMen.addEventListener('change', item => item = addImageToHtml(xmenMovies));
+radioButtonPrincess.addEventListener('change', item => item = addImageToHtml(princessMovies));
+radioButtonBatman.addEventListener('change', item => item = addImageToHtml(batmanMovies));
 
