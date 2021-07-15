@@ -7,9 +7,14 @@ const radioButtonAvengers = filterList[1];
 const radioButtonXMen = filterList[2];
 const radioButtonPrincess = filterList[3];
 const radioButtonBatman = filterList[4];
+const siteSearch = document.forms['site-search'].querySelector('input');
 
 // Functions
-const searchArray = str => movies.filter(({ Title }) => Title.includes(str));
+const searchArray = str => movies.filter(({ Title }) => {
+	Title = Title.toLowerCase();
+	str = str.toLowerCase();
+	return Title.includes(str);
+});
 
 const removeImageOffHtml = menu => {
 	const linksOnPage = document.getElementById('overview-movies').querySelectorAll('a');
@@ -48,6 +53,7 @@ const princessMovies = searchArray("Princess");
 const batmanMovies = searchArray("Batman");
 
 
+
 // Standard output when loading the webpage
 addImageToHtml(allMovies);
 
@@ -57,4 +63,4 @@ radioButtonAvengers.addEventListener('change', item => item = addImageToHtml(ave
 radioButtonXMen.addEventListener('change', item => item = addImageToHtml(xmenMovies));
 radioButtonPrincess.addEventListener('change', item => item = addImageToHtml(princessMovies));
 radioButtonBatman.addEventListener('change', item => item = addImageToHtml(batmanMovies));
-
+siteSearch.addEventListener('input', input => addImageToHtml(searchArray(input.target.value)));
