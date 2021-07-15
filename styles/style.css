@@ -1,2 +1,60 @@
+body {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+}
 
-/*# sourceMappingURL=style.css.map *//*# sourceMappingURL=style.css.map */
+header {
+  background-color: #ffc426;
+  padding: 10px;
+  margin: 0;
+}
+header h1 {
+  text-align: center;
+  font-size: 40px;
+}
+header #filter-buttons {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header #filter-buttons li {
+  width: 160px;
+}
+
+main {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 40px 10px;
+  background-color: #0a1e3a;
+}
+main a {
+  margin: 10px;
+}
+main a img {
+  width: 200px;
+}
+
+h1 {
+  color: #0a1e3a;
+}
+
+footer {
+  background-color: #ffc426;
+  color: #0a1e3a;
+  padding: 5px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  header #filter-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  header #filter-buttons li {
+    width: auto;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,70 @@
+$font: 'Raleway', sans-serif;
+$yellow-color: #ffc426;
+$grey-color: rgba(10, 30, 58);
+
+body {
+	margin: 0;
+	font-family: $font;
+}
+
+header {
+	background-color: $yellow-color;
+	padding: 10px;
+	margin: 0;
+
+	& h1 {
+		text-align: center;
+		font-size: 40px;
+	}
+
+	& #filter-buttons {
+		list-style-type: none;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		& li {
+			width: 160px;
+		}
+	}
+}
+
+main {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	padding: 40px 10px;
+	background-color: $grey-color;
+
+	& a {
+		margin: 10px;
+
+		& img {			
+			width: 200px;
+		}
+	}
+}
+
+h1 {
+	color: $grey-color;
+}
+
+footer {
+	background-color: $yellow-color;
+	color: $grey-color;
+	padding: 5px;
+	text-align: center;
+}
+
+@media (min-width: 768px) {
+	header #filter-buttons {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		
+		& li {
+			width: auto;
+		}
+	}
+}
