@@ -41,7 +41,7 @@ main {
 		margin: 10px;
 
 		& img {			
-			width: 200px;
+			width: 180px;
 		}
 	}
 }
@@ -73,6 +73,10 @@ footer {
 
 		& a {
 			margin: 10px;
+
+			& img {
+				width: 200px;
+			}
 		}
 	}
 }

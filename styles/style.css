@@ -34,7 +34,7 @@ main a {
   margin: 10px;
 }
 main a img {
-  width: 200px;
+  width: 180px;
 }
 
 h1 {
@@ -63,5 +63,8 @@ footer {
   }
   main a {
     margin: 10px;
+  }
+  main a img {
+    width: 200px;
   }
 }/*# sourceMappingURL=style.css.map */
