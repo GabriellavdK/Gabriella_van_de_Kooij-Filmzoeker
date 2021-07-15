@@ -22,6 +22,11 @@ header #filter-buttons {
 header #filter-buttons li {
   width: 160px;
 }
+header #filter-buttons li #site-search input {
+  padding: 5px;
+  border-radius: 10px;
+  margin: 5px;
+}
 
 main {
   display: flex;
@@ -48,7 +53,7 @@ footer {
   text-align: center;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 920px) {
   header #filter-buttons {
     display: flex;
     flex-direction: row;
